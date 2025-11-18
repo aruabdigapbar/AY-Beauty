@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YABeauty — Онлайн косметика</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>YABeauty</h1>
+    <nav>
+      <a href="#products">Товары</a>
+      <a href="#categories">Категории</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="categories" class="filter-box">
+      <label for="skinFilter">Тип кожи:</label>
+      <select id="skinFilter" aria-label="Фильтр по типу кожи">
+        <option value="all">Все</option>
+        <option value="dry">Сухая</option>
+        <option value="oily">Жирная</option>
+        <option value="combo">Комбинированная</option>
+      </select>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Товары</h2>
+      <div id="productGrid" class="product-list" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="info">
+      <h2>О нас</h2>
+      <p>Магазин YABeauty — качественная косметика для разных типов кожи.</p>
+    </section>
+
+    <section id="contact" class="info">
+      <h2>Контакты</h2>
+      <p>Email: info@yabeauty.example</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 YABeauty</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

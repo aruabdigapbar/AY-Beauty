@@ -1,0 +1,107 @@
+:root{
+  --bg: #fff0f5;
+  --pink-1: #ffb6c1;
+  --pink-2: #ff69b4;
+  --pink-3: #ff1493;
+  --card-bg: #ffffff;
+  --text: #222;
+}
+
+*{box-sizing: border-box}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* Header */
+header{
+  background-color: var(--pink-1);
+  padding: 18px 12px;
+  text-align: center;
+}
+header h1{margin:0; font-size: 28px}
+nav{margin-top:8px}
+nav a{
+  margin: 0 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Filter */
+.filter-box{
+  padding: 16px;
+  text-align: center;
+}
+
+/* Products */
+.products{padding: 12px}
+.product-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 12px;
+}
+
+.product{
+  border: 1px solid #e0dfe0;
+  background: var(--card-bg);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.product:focus-within,
+.product:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.product img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product h3{margin: 6px 0; font-size: 18px; text-align:center}
+.product p{margin: 6px 0; font-size: 14px; text-align:center}
+
+.price {font-weight: 700; margin-top:6px}
+
+/* Button */
+button{
+  background-color: var(--pink-2);
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 700;
+}
+button:hover{background-color: var(--pink-3)}
+button:focus{outline: 3px solid rgba(255,20,147,0.18); outline-offset: 2px}
+
+/* Footer and info */
+.info{padding: 12px 20px; text-align:center}
+footer{
+  background: var(--pink-1);
+  padding: 12px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* Адаптив */
+@media (max-width: 480px){
+  .product img{width: 140px; height: 140px}
+  header h1{font-size: 22px}
+}
